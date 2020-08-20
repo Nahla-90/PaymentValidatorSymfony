@@ -3,17 +3,20 @@ namespace App\Controller;
 
 use App\Entity\CreditCard;
 use App\Entity\Mobile;
-use phpDocumentor\Reflection\Types\Parent_;
+use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Config\Definition\Exception\Exception;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use App\Controller\BaseController;
 
 class ValidatorController extends BaseController
 {
     /**
-     * Created By Nahla Sameh
+     * * Created By Nahla Sameh
+     * @Route(
+     *     "/validate",
+     *      methods={"POST"}
+     *     )
      * Validate Credit cards according to request data
      */
     static function validate(Request $request)
